@@ -1,1 +1,17 @@
-﻿using (Html.BeginForm("LogOff","Account", FormMethod.Post, new ))
+﻿@using Microsoft.AspNet.Identity
+@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+{
+    @Html.AntiForgeryToken()
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hidden="false">@User.Identity.GetUserName()
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="@Url.Action("Attending","Courses")">Course I'm Going'</a></li>
+                <li><a href="#">Lecture I'm Flowing'</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascipt:document.getElementById('logoutForm').submit()">Log Out</a></li>
+            </ul>
+        </li>
+    </ul>
+}
