@@ -65,7 +65,7 @@ textarea {
     left: 70px;
     position: absolute;
 }
-.course > li:hover .action
+.course > li .action
 {
     display:block;
 }

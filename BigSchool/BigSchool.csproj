@@ -283,6 +283,7 @@
     <Content Include="Scripts\ai.1.0.20-build00666.js" />
     <Content Include="Scripts\ai.1.0.20-build00666.min.js" />
     <Content Include="Scripts\app\coursesController.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
