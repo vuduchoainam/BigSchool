@@ -1,5 +1,5 @@
 ﻿@using System.Linq
-@model BigSchool.ViewModels.CourseViewModel
+@model BigSchool.ViewModels.CoursesViewModel
 @{
     ViewBag.Title = "Home Page";
 }
@@ -10,20 +10,20 @@
         {
             <li>
                 <div class="date">
-                    <div class="month">@course.datetime.ToString("MM")</div>
-                    <div class="day">@course.datetime.ToString("dd")</div>
-                    <div class="year">@course.datetime.ToString("yyyy")</div>
+                    <div class="month">@course.DateTime.ToString("MM")</div>
+                    <div class="day">@course.DateTime.ToString("dd")</div>
+                    <div class="year">@course.DateTime.ToString("yyyy")</div>
                 </div>
                 <div class="details">
-                    <span class="lecturer">@course.Lecture.Name</span>
+                    <span class="lecturer">@course.Lecturer.Name</span>
                     @if (Model.ShowAction)
                     {
-                        <button data-user-id="@course.LectureID" class="btn btn-default btn-sm js-toggle-follow">Follow</button>
+                        <button data-user-id="@course.LecturerId" class="btn btn-default btn-sm js-toggle-follow">Follow</button>
                     }
                     <span class="category">@course.Category.Name</span>
                     @if (Model.ShowAction)
                     {
-                        <button data-course-id="@course.id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
                     }
                 </div>
             </li>
