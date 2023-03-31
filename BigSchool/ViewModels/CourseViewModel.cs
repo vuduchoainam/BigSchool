@@ -30,6 +30,9 @@ namespace BigSchool.ViewModels
         { 
             get { return (Id != 0) ? "Update" : "Create"; }
         }
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public IEnumerable<Following> FollowingLecture { get; set; }
+        public bool ShowAction { get; set; }
         public DateTime GetDateTime()
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
