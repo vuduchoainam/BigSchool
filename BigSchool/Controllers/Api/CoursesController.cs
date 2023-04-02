@@ -16,7 +16,6 @@ namespace BigSchool.Controllers.Api
         {
             _dbContext = new ApplicationDbContext();
         }
-
         [HttpDelete]
         public IHttpActionResult Cancel(int id)
         {
